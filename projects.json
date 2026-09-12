@@ -1,0 +1,127 @@
+{
+  "owner": {
+    "name": "Spencer Brake",
+    "tagline": "Builder of practical apps for real, often overlooked places.",
+    "blurb": "I build useful systems for places where the usual assumptions do not hold.",
+    "about": "I am a builder and systems architect focused on the operational layer: how people move, pay, queue, book, dispatch, discover work, and keep track of what matters. I live and work in the remote North of Canada, where I work in retail management and build around the constraints I see firsthand—spotty connectivity, no card payments, civic-number addresses, field work, and people who should not need a manual. I am also a sound engineer and a certified minerals prospector, happiest panning for gold or looking at rocks. Through Presidia Corp, the problem-solving corporation, I turn real constraints into simple, durable tools that fit the place they are meant to serve.",
+    "company": "Presidia Corp",
+    "companyTagline": "the problem-solving corporation",
+    "email": "spencerbrake94@gmail.com",
+    "location": "Canada"
+  },
+  "projects": [
+    {
+      "name": "KnowYourLocal",
+      "tagline": "Nationwide local-services marketplace",
+      "description": "A PWA connecting people with local tradespeople and services, with Stripe Connect escrow so money is only released when the work is done. Availability is baked into each paid ad and a filterable work-photo feed drives discovery.",
+      "stack": ["Next.js", "Supabase", "Stripe Connect", "PWA"],
+      "tags": ["Marketplace", "Payments", "PWA"],
+      "url": "https://knowyourlocal.vercel.app",
+      "status": "Alpha",
+      "year": 2025,
+      "featured": true
+    },
+    {
+      "name": "Chewdash Taxi",
+      "tagline": "Ride-booking for a remote Nunavik town",
+      "description": "An offline-first ride-booking PWA for a taxi business in Kuujjuarapik. Built to be dead simple — a teen or an elder can book with no instruction — and to work with no card payments and spotty connectivity. Live and monetized.",
+      "stack": ["Vite", "Supabase", "PWA"],
+      "tags": ["PWA", "Offline-first", "Transport"],
+      "url": "https://chewdash.ca",
+      "status": "Live",
+      "year": 2025,
+      "featured": true
+    },
+    {
+      "name": "Ponte",
+      "tagline": "Live-translation video calls",
+      "description": "A video-call app with real-time captions that translate between languages on every call, powered by Claude. Static frontend on Vercel, Express API on Railway. Live and in daily use since May 2026.",
+      "stack": ["JavaScript", "Express", "Vercel", "Railway"],
+      "tags": ["Video", "AI", "Translation"],
+      "status": "Live",
+      "year": 2026,
+      "featured": true
+    },
+    {
+      "name": "Weedback",
+      "tagline": "Cannabis grading",
+      "description": "A web app for grading cannabis — scoring and rating quality — built on Next.js and deployed to production.",
+      "stack": ["Next.js", "Supabase"],
+      "tags": ["Grading", "SaaS", "Cannabis"],
+      "status": "Alpha",
+      "year": 2025,
+      "featured": false
+    },
+    {
+      "name": "Northern Utility Dispatch",
+      "tagline": "Oil, water & sewage dispatch for the North",
+      "description": "A request → dispatch → driver workflow for utility deliveries in northern Quebec and Nunavut, built around civic-number houses and no card payments. A live demo aimed at regional government buyers.",
+      "stack": ["Supabase", "PWA"],
+      "tags": ["Dispatch", "Government", "Logistics"],
+      "url": "https://northern-dispatch.vercel.app",
+      "status": "Alpha",
+      "year": 2025,
+      "featured": false
+    },
+    {
+      "name": "Q",
+      "tagline": "Geo-fenced queueing for nightlife",
+      "description": "A fast-admission and queueing system for bars, clubs, and other time-sensitive venues. Uses geolocation and geo-fencing to build real-time queues — a restaurant buzzer for your night out — while giving venues live occupancy data.",
+      "stack": ["Geo-fencing", "Mobile"],
+      "tags": ["Nightlife", "Location", "Queueing"],
+      "status": "In progress",
+      "year": 2025,
+      "featured": false
+    },
+    {
+      "name": "SpennyBurger",
+      "tagline": "Smash-burger pickup & payment portal",
+      "description": "A DoorDash-style ordering portal for a single-product pop-up burger business: one burger, real Stripe payments, and a kitchen view that texts customers when their order is ready. Ran live; archived for future use.",
+      "stack": ["Node.js", "Stripe", "Web"],
+      "tags": ["Ordering", "Payments", "Food"],
+      "status": "Archived",
+      "year": 2025,
+      "featured": false
+    },
+    {
+      "name": "eProspector",
+      "tagline": "Discover and track mineral deposits",
+      "description": "A field-notebook-inspired exploration workspace for prospectors to log, map, and track mineral deposits, with an interactive map and cloud-synced notes.",
+      "stack": ["Next.js", "React", "Leaflet", "Supabase"],
+      "tags": ["Mapping", "Mining", "Field tool"],
+      "status": "Alpha",
+      "year": 2025,
+      "featured": false
+    },
+    {
+      "name": "Invstar",
+      "tagline": "QSR inventory & ordering",
+      "description": "A retail and quick-service-restaurant tool for managing inventory and orders — keeping stock counts and order flow in one place for fast-moving front counters.",
+      "stack": ["Web"],
+      "tags": ["Inventory", "Ordering", "Retail"],
+      "status": "Archived",
+      "year": 2025,
+      "featured": false
+    },
+    {
+      "name": "MetalPRO Terminal",
+      "tagline": "Bloomberg-style metals & minerals terminal",
+      "description": "A browser terminal for tracking precious metals, mining equities, energy commodities, rare earth elements, and strategic minerals — built for critical-mineral and conflict-resource trading analysis. Live prices via Yahoo Finance, OHLC candlestick charts, futures curves, and keyboard-driven views (MRKT, PREC, MINE, NRGY, REES, and more).",
+      "stack": ["Vanilla JS", "HTML/CSS", "Netlify Functions", "Yahoo Finance"],
+      "tags": ["Finance", "Commodities", "Terminal"],
+      "status": "Archived",
+      "year": 2026,
+      "featured": false
+    },
+    {
+      "name": "COMMAND NODE",
+      "tagline": "Real-time global warfare, Cold War console",
+      "description": "A real-time, Risk-style browser game of global conquest wrapped in a Cold War command-console aesthetic — glowing terminals, live fronts, and persistent world state.",
+      "stack": ["JavaScript", "Web"],
+      "tags": ["Game", "Real-time"],
+      "status": "In progress",
+      "year": 2025,
+      "featured": false
+    }
+  ]
+}
