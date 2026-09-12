@@ -18,7 +18,7 @@
       "tags": ["Marketplace", "Payments", "PWA"],
       "url": "https://knowyourlocal.vercel.app",
       "status": "Alpha",
-      "year": 2025,
+      "year": 2026,
       "featured": true
     },
     {
@@ -29,7 +29,7 @@
       "tags": ["PWA", "Offline-first", "Transport"],
       "url": "https://chewdash.ca",
       "status": "Live",
-      "year": 2025,
+      "year": 2026,
       "featured": true
     },
     {
@@ -50,7 +50,7 @@
       "stack": ["Next.js", "Supabase"],
       "tags": ["Grading", "SaaS", "Cannabis"],
       "status": "Alpha",
-      "year": 2025,
+      "year": 2026,
       "featured": false
     },
     {
@@ -61,7 +61,7 @@
       "tags": ["Dispatch", "Government", "Logistics"],
       "url": "https://northern-dispatch.vercel.app",
       "status": "Alpha",
-      "year": 2025,
+      "year": 2026,
       "featured": false
     },
     {
@@ -71,7 +71,7 @@
       "stack": ["Geo-fencing", "Mobile"],
       "tags": ["Nightlife", "Location", "Queueing"],
       "status": "In progress",
-      "year": 2025,
+      "year": 2026,
       "featured": false
     },
     {
@@ -81,7 +81,7 @@
       "stack": ["Node.js", "Stripe", "Web"],
       "tags": ["Ordering", "Payments", "Food"],
       "status": "Archived",
-      "year": 2025,
+      "year": 2026,
       "featured": false
     },
     {
@@ -91,7 +91,7 @@
       "stack": ["Next.js", "React", "Leaflet", "Supabase"],
       "tags": ["Mapping", "Mining", "Field tool"],
       "status": "Alpha",
-      "year": 2025,
+      "year": 2026,
       "featured": false
     },
     {
@@ -101,7 +101,7 @@
       "stack": ["Web"],
       "tags": ["Inventory", "Ordering", "Retail"],
       "status": "Archived",
-      "year": 2025,
+      "year": 2026,
       "featured": false
     },
     {
@@ -121,7 +121,7 @@
       "stack": ["JavaScript", "Web"],
       "tags": ["Game", "Real-time"],
       "status": "In progress",
-      "year": 2025,
+      "year": 2026,
       "featured": false
     }
   ]
