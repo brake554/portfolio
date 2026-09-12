@@ -44,6 +44,7 @@
     },
     {
       "name": "Weedback",
+      "hidden": true,
       "tagline": "Cannabis grading",
       "description": "A web app for grading cannabis — scoring and rating quality — built on Next.js and deployed to production.",
       "stack": ["Next.js", "Supabase"],
