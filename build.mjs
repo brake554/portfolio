@@ -20,10 +20,65 @@ body{background:#d5d0bf;background-image:radial-gradient(#aaa591 .65px,transpare
 .hero{min-height:78svh;margin-top:5svh}.hero-copy{max-width:650px;line-height:1.7}.scroll-note{margin-top:30px;font-size:13px}.work-section{padding:0;border:0}.work-section>h2{margin:0 0 24px}.project-list{border:0}.project:last-child{border:1px solid var(--ink);padding:clamp(24px,5vw,56px)}.project-top{flex-wrap:wrap}.project h3{font-size:clamp(30px,5vw,48px)}.project-notes{border-top:1px dashed var(--line);padding-top:20px;margin-bottom:12px;max-width:700px}.project-notes h4{font-size:12px;letter-spacing:.08em;margin:0 0 8px}.project .project-notes p{font-size:14px;line-height:1.65}.about .aside{margin-top:28px}.contact{margin-bottom:10svh}.contact a{overflow-wrap:anywhere}.reveal{transform:none;transition:opacity .6s ease,transform .8s cubic-bezier(.2,.8,.2,1),box-shadow .8s ease}.reveal.is-pending{opacity:0;transform:translateY(90px) scale(.97);box-shadow:0 0 0 transparent}.reveal.is-visible{opacity:1;transform:none;box-shadow:8px 10px 0 #24231d}.reveal:focus-within{opacity:1;transform:none}
 @media(max-width:620px){.shell{width:calc(100% - 30px)}.hero,.project,.about,.contact,.project:last-child{padding:25px 20px}.project{min-height:80svh;margin-bottom:25svh}.readout{font-size:11px}.project p:not(.project-type):not(.tools){font-size:15px}footer{flex-wrap:wrap}}
 @media(prefers-reduced-motion:reduce){.reveal,.reveal.is-pending{opacity:1;transform:none;transition:none}}
-</style></head><body><div class="shell"><header class="topbar"><b>${esc(owner.name).toUpperCase()} // PORTFOLIO</b><nav><a href="#work">work</a><a href="#about">about</a><a href="#contact">contact</a></nav></header><main><section class="hero reveal"><p class="kicker">INTRODUCTION // ${esc(owner.location || "")}</p><h1>${esc(owner.name)}<span class="cursor">_</span></h1><p class="intro">${esc(owner.tagline)}</p><span class="readout">SYSTEMS BUILDER / PRODUCT ARCHITECT</span><p class="hero-copy">I’m Spencer. I work in retail management in Canada’s remote North, engineer sound, and prospect for minerals. I build software around the practical problems that catch my attention—through Presidia Corp, the problem-solving corporation.</p><a class="scroll-note" href="#work">[ scroll down to explore the work ↓ ]</a></section>${work}<section id="about" class="about reveal"><div><h2>&gt; ABOUT THE BUILDER</h2><p>${esc(owner.about || owner.blurb || "")}</p></div><aside class="aside"><p>WORKING ON<br>real-world software<br>local infrastructure<br>products with edge cases<br><br>BASED IN<br>${esc(owner.location || "Canada")}</p></aside></section><section id="contact" class="contact reveal"><h2>Have a system worth building?</h2><p><a href="mailto:${esc(owner.email)}">${esc(owner.email)}</a><br><br>Available for interesting problems, unusual contexts, and products that have to work outside the happy path.</p></section></main><footer><span>© ${new Date().getFullYear()} ${esc(owner.name)}</span><span>HAND-CODED // NO TRACKERS</span></footer></div><script>const items=document.querySelectorAll('.reveal');if('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches){const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');entry.target.classList.remove('is-pending');observer.unobserve(entry.target)}}),{rootMargin:'0px 0px -25% 0px',threshold:0});items.forEach(item=>{item.classList.add('is-pending');observer.observe(item)})}</script></body></html>`;
+
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.typed-word{white-space:nowrap}.typed-char{opacity:0;animation:type-in 80ms ease-out forwards}
+@keyframes type-in{from{opacity:0}to{opacity:1}}
+.reveal{transition:opacity .65s ease,transform 1s cubic-bezier(.16,1,.3,1),box-shadow 1s cubic-bezier(.16,1,.3,1)}
+.reveal.is-pending{transform:translateY(64px) scale(.985)}
+a{transition:color .2s ease,background-color .2s ease;text-decoration-thickness:1px}
+@media(prefers-reduced-motion:reduce){.typed-char{opacity:1;animation:none}.reveal{transition:none}.cursor{animation:none}}
+</style></head><body><div class="shell"><header class="topbar"><b>${esc(owner.name).toUpperCase()} // PORTFOLIO</b><nav><a href="#work">work</a><a href="#about">about</a><a href="#contact">contact</a></nav></header><main><section class="hero reveal"><p class="kicker">INTRODUCTION // ${esc(owner.location || "")}</p><h1>${esc(owner.name)}<span class="cursor">_</span></h1><p class="intro">${esc(owner.tagline)}</p><span class="readout">SYSTEMS BUILDER / PRODUCT ARCHITECT</span><p class="hero-copy">I’m Spencer. I work in retail management in Canada’s remote North, engineer sound, and prospect for minerals. I build software around the practical problems that catch my attention—through Presidia Corp, the problem-solving corporation.</p><a class="scroll-note" href="#work">[ scroll down to explore the work ↓ ]</a></section>${work}<section id="about" class="about reveal"><div><h2>&gt; ABOUT THE BUILDER</h2><p>${esc(owner.about || owner.blurb || "")}</p></div><aside class="aside"><p>WORKING ON<br>real-world software<br>local infrastructure<br>products with edge cases<br><br>BASED IN<br>${esc(owner.location || "Canada")}</p></aside></section><section id="contact" class="contact reveal"><h2>Have a system worth building?</h2><p><a href="mailto:${esc(owner.email)}">${esc(owner.email)}</a><br><br>Available for interesting problems, unusual contexts, and products that have to work outside the happy path.</p></section></main><footer><span>© ${new Date().getFullYear()} ${esc(owner.name)}</span><span>HAND-CODED // NO TRACKERS</span></footer></div><script>
+const boards=[...document.querySelectorAll('.reveal')];
+const motion=matchMedia('(prefers-reduced-motion: reduce)');
+function typeText(board){
+  board.querySelectorAll('h1,h2,h3,h4,p').forEach((element,index)=>{
+    if(element.children.length || !element.textContent.trim()) return;
+    const value=element.textContent;
+    const accessible=document.createElement('span');
+    accessible.className='sr-only'; accessible.textContent=value;
+    const visual=document.createElement('span'); visual.setAttribute('aria-hidden','true');
+    const chars=[...value]; const step=Math.min(24,1600/Math.max(chars.length,1));
+    let position=0;
+    value.split(/(\\s+)/).forEach(token=>{
+      const word=document.createElement('span');word.className=/^\\s+$/.test(token)?'':'typed-word';
+      for(const character of token){
+        const span=document.createElement('span');span.textContent=character;span.className='typed-char';
+        span.style.animationDelay=(180+Math.min(index*100,650)+position++*step)+'ms';
+        word.append(span);
+      }
+      visual.append(word);
+    });
+    element.replaceChildren(accessible,visual);
+    setTimeout(()=>element.replaceChildren(document.createTextNode(value)),2700);
+  });
+}
+function reveal(board){
+  board.classList.remove('is-pending');board.classList.add('is-visible');
+  if(!motion.matches)typeText(board);
+}
+if(!motion.matches){
+  boards.forEach(board=>board.classList.add('is-pending'));
+  let scheduled=false;
+  function update(){
+    scheduled=false;
+    boards.forEach((board,index)=>{
+      if(!board.classList.contains('is-pending'))return;
+      const rect=board.getBoundingClientRect();
+      const previous=index?boards[index-1].getBoundingClientRect():null;
+      if(rect.top<innerHeight*.75 && (!previous || previous.bottom<innerHeight*.18))reveal(board);
+    });
+  }
+  function schedule(){if(!scheduled){scheduled=true;requestAnimationFrame(update)}}
+  addEventListener('scroll',schedule,{passive:true});addEventListener('resize',schedule);
+  document.addEventListener('focusin',event=>{const board=event.target.closest('.reveal.is-pending');if(board)reveal(board)});
+  motion.addEventListener('change',()=>{if(motion.matches)boards.forEach(board=>board.classList.remove('is-pending'))});
+  update();
+}
+</script></body></html>`;
 const brandedHtml = html
   .replace("SYSTEMS BUILDER / PRODUCT ARCHITECT", `SYSTEMS BUILDER / PRODUCT ARCHITECT<br>${esc(owner.company || "Presidia Corp").toUpperCase()} // ${esc(owner.companyTagline || "the problem-solving corporation").toUpperCase()}`)
   .replace(`© ${new Date().getFullYear()} ${esc(owner.name)}</span>`, `© ${new Date().getFullYear()} ${esc(owner.name)} / ${esc(owner.company || "Presidia Corp")}</span>`);
-const finalHtml = brandedHtml.replace("rootMargin:'0px 0px -25% 0px'", "rootMargin:'0px 0px -70% 0px'").replace("threshold:0});items.forEach", "threshold:0.05});items.forEach");
+const finalHtml = brandedHtml;
 writeFileSync(join(root, "index.html"), finalHtml);
 console.log(`Built index.html — ${projects.length} projects.`);
