@@ -13,7 +13,7 @@
     {
       "name": "KnowYourLocal",
       "tagline": "Nationwide local-services marketplace",
-      "description": "A PWA connecting people with local tradespeople and services, with Stripe Connect escrow so money is only released when the work is done. Availability is baked into each paid ad and a filterable work-photo feed drives discovery.",
+      "description": "A peer-to-peer handyman marketplace where people can find local workers through availability and work photos, while tradespeople find jobs and get paid through Stripe Connect escrow only after the work is done.",
       "stack": ["Next.js", "Supabase", "Stripe Connect", "PWA"],
       "tags": ["Marketplace", "Payments", "PWA"],
       "url": "https://knowyourlocal.vercel.app",
@@ -24,7 +24,7 @@
     {
       "name": "Chewdash Taxi",
       "tagline": "Ride-booking for a remote Nunavik town",
-      "description": "An offline-first ride-booking PWA for a taxi business in Kuujjuarapik. Built to be dead simple — a teen or an elder can book with no instruction — and to work with no card payments and spotty connectivity. Live and monetized.",
+      "description": "A simple local dispatch system for Kuujjuarapik: book a taxi, arrange food pickup from nearby spots, or request a snack delivery. The goal is an interface anyone can use without instruction.",
       "stack": ["Vite", "Supabase", "PWA"],
       "tags": ["PWA", "Offline-first", "Transport"],
       "url": "https://chewdash.ca",
@@ -35,7 +35,7 @@
     {
       "name": "Ponte",
       "tagline": "Live-translation video calls",
-      "description": "A video-call app with real-time captions that translate between languages on every call, powered by Claude. Static frontend on Vercel, Express API on Railway. Live and in daily use since May 2026.",
+      "description": "A private video-call tool with live translated captions, built to make a long-distance conversation feel natural across a language barrier. Live and in daily use.",
       "stack": ["JavaScript", "Express", "Vercel", "Railway"],
       "tags": ["Video", "AI", "Translation"],
       "status": "Live",
@@ -46,7 +46,7 @@
       "name": "Weedback",
       "hidden": true,
       "tagline": "Cannabis grading",
-      "description": "A web app for grading cannabis — scoring and rating quality — built on Next.js and deployed to production.",
+      "description": "A consumer-led cannabis grading system: ten user-scored metrics become an algorithmic score out of 100 and a grade from A- through AAAA+, organized by batch, strain, brand, and licensed producer.",
       "stack": ["Next.js", "Supabase"],
       "tags": ["Grading", "SaaS", "Cannabis"],
       "status": "Alpha",
@@ -56,7 +56,7 @@
     {
       "name": "Northern Utility Dispatch",
       "tagline": "Oil, water & sewage dispatch for the North",
-      "description": "A request → dispatch → driver workflow for utility deliveries in northern Quebec and Nunavut, built around civic-number houses and no card payments. A live demo aimed at regional government buyers.",
+      "description": "A shared request-to-dispatch-to-driver workflow for oil, water, and sewage deliveries, giving residents, dispatchers, and drivers the same status and delivery details across northern Quebec and Nunavut.",
       "stack": ["Supabase", "PWA"],
       "tags": ["Dispatch", "Government", "Logistics"],
       "url": "https://northern-dispatch.vercel.app",
@@ -67,7 +67,7 @@
     {
       "name": "Q",
       "tagline": "Geo-fenced queueing for nightlife",
-      "description": "A fast-admission and queueing system for bars, clubs, and other time-sensitive venues. Uses geolocation and geo-fencing to build real-time queues — a restaurant buzzer for your night out — while giving venues live occupancy data.",
+      "description": "A geo-fenced queue for bars and clubs that lets people wait somewhere warm instead of standing outside in rain or snow, while venues move guests through faster and see live occupancy.",
       "stack": ["Geo-fencing", "Mobile"],
       "tags": ["Nightlife", "Location", "Queueing"],
       "status": "In progress",
@@ -77,7 +77,7 @@
     {
       "name": "SpennyBurger",
       "tagline": "Smash-burger pickup & payment portal",
-      "description": "A DoorDash-style ordering portal for a single-product pop-up burger business: one burger, real Stripe payments, and a kitchen view that texts customers when their order is ready. Ran live; archived for future use.",
+      "description": "A direct ordering and payment portal built because Facebook messages were impossible to answer while cooking. Customers order and pay; the kitchen marks the order ready and the customer gets a pickup text.",
       "stack": ["Node.js", "Stripe", "Web"],
       "tags": ["Ordering", "Payments", "Food"],
       "status": "Archived",
@@ -87,7 +87,7 @@
     {
       "name": "eProspector",
       "tagline": "Discover and track mineral deposits",
-      "description": "A field-notebook-inspired exploration workspace for prospectors to log, map, and track mineral deposits, with an interactive map and cloud-synced notes.",
+      "description": "A shared exploration workspace for anyone interested in prospecting: pin a find, check claims, attach photos, and decide whether to keep it with the team or make it public.",
       "stack": ["Next.js", "React", "Leaflet", "Supabase"],
       "tags": ["Mapping", "Mining", "Field tool"],
       "status": "Alpha",
@@ -97,7 +97,7 @@
     {
       "name": "Invstar",
       "tagline": "QSR inventory & ordering",
-      "description": "A retail and quick-service-restaurant tool for managing inventory and orders — keeping stock counts and order flow in one place for fast-moving front counters.",
+      "description": "A department-manager inventory system for remote operations. Track units across warehouses, sea cans, freezers, coolers, dry storage, and backrooms; tap when a unit is used; and get reorder guidance based on stock, daily use, and lead time.",
       "stack": ["Web"],
       "tags": ["Inventory", "Ordering", "Retail"],
       "status": "Archived",
@@ -107,7 +107,7 @@
     {
       "name": "MetalPRO Terminal",
       "tagline": "Bloomberg-style metals & minerals terminal",
-      "description": "A browser terminal for tracking precious metals, mining equities, energy commodities, rare earth elements, and strategic minerals — built for critical-mineral and conflict-resource trading analysis. Live prices via Yahoo Finance, OHLC candlestick charts, futures curves, and keyboard-driven views (MRKT, PREC, MINE, NRGY, REES, and more).",
+      "description": "A shared research terminal built with my dad for watching precious metals, mining equities, energy, rare earths, and strategic minerals in one place, with live prices, charts, futures curves, and keyboard-driven views.",
       "stack": ["Vanilla JS", "HTML/CSS", "Netlify Functions", "Yahoo Finance"],
       "tags": ["Finance", "Commodities", "Terminal"],
       "status": "Archived",
@@ -117,7 +117,7 @@
     {
       "name": "COMMAND NODE",
       "tagline": "Real-time global warfare, Cold War console",
-      "description": "A real-time, Risk-style browser game of global conquest wrapped in a Cold War command-console aesthetic — glowing terminals, live fronts, and persistent world state.",
+      "description": "A real-time conquest game combining live fronts, long-term planning, persistent world state, and the atmosphere of a Cold War command room.",
       "stack": ["JavaScript", "Web"],
       "tags": ["Game", "Real-time"],
       "status": "In progress",

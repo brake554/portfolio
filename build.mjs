@@ -9,7 +9,7 @@ const { owner, projects } = JSON.parse(readFileSync(join(root, "projects.json"),
 const esc = (s = "") => String(s).replace(/[&<>"']/g, c => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;" }[c]));
 const statusClass = s => ({ live:"live", alpha:"alpha", "in progress":"progress", archived:"archived" })[(s || "").toLowerCase()] || "progress";
 const context = {
-  'Chewdash Taxi': ['Local transportation and delivery need one simple flow that anyone can understand.', 'A lightweight local dispatch system for taxi rides, food pickup from nearby spots, and snack delivery. Square handles payment; the product focuses on making every booking obvious.'],
+  'Chewdash Taxi': ['Local transportation and delivery need one simple flow that anyone can understand.', 'A lightweight local dispatch system for taxi rides, food pickup from nearby spots, and snack delivery. It is built for straightforward use in the community; Square handles payment and the product focuses on making every booking obvious.'],
   'Ponte': ['Distance and language should not make a conversation feel impossible.', 'A private video-call tool with live translated captions, designed around two people trying to stay close across a language barrier.'],
   'KnowYourLocal': ['A peer-to-peer handyman marketplace needs trust on both sides of the job.', 'People discover local workers through availability and work photos, while tradespeople find jobs and get paid through escrow that releases when the work is complete.'],
   'Northern Utility Dispatch': ['Remote utility delivery breaks down when residents, dispatchers, and drivers cannot see the same request.', 'One request-to-dispatch-to-driver workflow for oil, water, and sewage deliveries, with clear status and delivery details for everyone involved.'],
@@ -37,5 +37,6 @@ body{background:#d5d0bf;background-image:radial-gradient(#aaa591 .65px,transpare
 const brandedHtml = html
   .replace("SYSTEMS BUILDER / PRODUCT ARCHITECT", `SYSTEMS BUILDER / PRODUCT ARCHITECT<br>${esc(owner.company || "Presidia Corp").toUpperCase()} // ${esc(owner.companyTagline || "the problem-solving corporation").toUpperCase()}`)
   .replace(`© ${new Date().getFullYear()} ${esc(owner.name)}</span>`, `© ${new Date().getFullYear()} ${esc(owner.name)} / ${esc(owner.company || "Presidia Corp")}</span>`);
-writeFileSync(join(root, "index.html"), brandedHtml);
+const finalHtml = brandedHtml.replace("rootMargin:'0px 0px -25% 0px'", "rootMargin:'0px 0px -70% 0px'").replace("threshold:0});items.forEach", "threshold:0.05});items.forEach");
+writeFileSync(join(root, "index.html"), finalHtml);
 console.log(`Built index.html — ${projects.length} projects.`);
