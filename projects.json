@@ -3,7 +3,7 @@
     "name": "Spencer Brake",
     "tagline": "Builder of practical apps for real, often overlooked places.",
     "blurb": "I build useful systems for places where the usual assumptions do not hold.",
-    "about": "I am a builder and systems architect focused on the operational layer: how people move, pay, queue, book, dispatch, discover work, and keep track of what matters. I live and work in the remote North of Canada, where I work in retail management and build around the constraints I see firsthand—spotty connectivity, no card payments, civic-number addresses, field work, and people who should not need a manual. I am also a sound engineer and a certified minerals prospector, happiest panning for gold or looking at rocks. Through Presidia Corp, the problem-solving corporation, I turn real constraints into simple, durable tools that fit the place they are meant to serve.",
+    "about": "I build systems around the work people actually do: ordering stock, dispatching a delivery, booking a ride, or recording a discovery. My work as a department manager in Canada’s remote North shapes that perspective. I care about the small actions that make a system usable, and the information that makes a decision easier. I am also a sound engineer and a certified minerals prospector; outside software, I enjoy panning for gold and looking at rocks. Presidia Corp is my company—the problem-solving corporation.",
     "company": "Presidia Corp",
     "companyTagline": "the problem-solving corporation",
     "email": "contact@spencerbrake.dev",
@@ -13,116 +13,212 @@
     {
       "name": "KnowYourLocal",
       "tagline": "Nationwide local-services marketplace",
-      "description": "A peer-to-peer handyman marketplace where people can find local workers through availability and work photos, while tradespeople find jobs and get paid through Stripe Connect escrow only after the work is done.",
-      "stack": ["Next.js", "Supabase", "Stripe Connect", "PWA"],
-      "tags": ["Marketplace", "Payments", "PWA"],
+      "description": "KnowYourLocal started with the idea of a peer-to-peer handyman marketplace. People need someone nearby they can trust with a job; local workers need a way to get discovered and find work. Payment confidence matters to both sides.",
+      "stack": [
+        "Next.js",
+        "Supabase",
+        "Stripe Connect",
+        "PWA"
+      ],
+      "tags": [
+        "Marketplace",
+        "Payments",
+        "PWA"
+      ],
       "url": "https://knowyourlocal.vercel.app",
       "status": "Alpha",
       "year": 2026,
-      "featured": true
+      "featured": true,
+      "approach": "Work photos provide something concrete to judge, and availability is included in paid listings so discovery reflects who can take the job. The proposed payment flow uses Stripe Connect to hold payment until the work is done, connecting discovery, scheduling, and completion."
     },
     {
       "name": "Chewdash Taxi",
-      "tagline": "Ride-booking for a remote Nunavik town",
-      "description": "A simple local dispatch system for Kuujjuarapik: book a taxi, arrange food pickup from nearby spots, or request a snack delivery. The goal is an interface anyone can use without instruction.",
-      "stack": ["Vite", "Supabase", "PWA"],
-      "tags": ["PWA", "Offline-first", "Transport"],
+      "tagline": "Local rides, food pickup & snack delivery",
+      "description": "Chewdash serves Kuujjuarapik with taxi rides, food pickup from local spots, and snack delivery. The challenge was fitting those services into the local taxi workflow while making booking simple enough for a teenager or an elder to use without instruction.",
+      "stack": [
+        "Vite",
+        "Supabase",
+        "PWA"
+      ],
+      "tags": [
+        "PWA",
+        "Delivery",
+        "Transport"
+      ],
       "url": "https://chewdash.ca",
       "status": "Live",
       "year": 2026,
-      "featured": true
+      "featured": true,
+      "approach": "I focused on the steps between choosing a service and requesting it. Satellite internet and an existing Square terminal already cover connectivity and card payments, so the design work centers on understandable booking and dispatch across rides and deliveries."
     },
     {
       "name": "Ponte",
       "tagline": "Live-translation video calls",
-      "description": "A private video-call tool with live translated captions, built to make a long-distance conversation feel natural across a language barrier. Live and in daily use.",
-      "stack": ["JavaScript", "Express", "Vercel", "Railway"],
-      "tags": ["Video", "AI", "Translation"],
+      "description": "Ponte grew out of a straightforward need: helping people maintain a close connection across distance when they speak different languages. A conversation should have room for spontaneity, even when the words do not come easily. The video-call app is live and used daily.",
+      "stack": [
+        "JavaScript",
+        "Express",
+        "Vercel",
+        "Railway"
+      ],
+      "tags": [
+        "Video",
+        "AI",
+        "Translation"
+      ],
       "status": "Live",
       "year": 2026,
-      "featured": true
+      "featured": true,
+      "approach": "Translated captions appear during the call, keeping translation alongside the person speaking. The interface supports a continuing conversation rather than making translation a separate task. A static frontend and a separate Express API provide the application’s two main pieces."
     },
     {
       "name": "Weedback",
       "hidden": true,
       "tagline": "Cannabis grading",
-      "description": "A consumer-led cannabis grading system: ten user-scored metrics become an algorithmic score out of 100 and a grade from A- through AAAA+, organized by batch, strain, brand, and licensed producer.",
-      "stack": ["Next.js", "Supabase"],
-      "tags": ["Grading", "SaaS", "Cannabis"],
+      "description": "Weedback is intended to help consumers judge cannabis quality and give licensed producers useful feedback. The main interest is how batches compare over time, alongside what people appreciate, where products fall short, and which qualities contribute to stronger grades.",
+      "stack": [
+        "Next.js",
+        "Supabase"
+      ],
+      "tags": [
+        "Grading",
+        "SaaS",
+        "Cannabis"
+      ],
       "status": "Alpha",
       "year": 2026,
-      "featured": false
+      "featured": false,
+      "approach": "Consumers rate ten metrics. An algorithm converts them into a score out of 100 and a grade from A- through AAAA+. Reviews are organized by batch, strain, brand, and licensed producer, allowing comparisons at each level. Aggregated opinions can reveal patterns, while remaining consumer judgments rather than objective laboratory measurements."
     },
     {
       "name": "Northern Utility Dispatch",
       "tagline": "Oil, water & sewage dispatch for the North",
-      "description": "A shared request-to-dispatch-to-driver workflow for oil, water, and sewage deliveries, giving residents, dispatchers, and drivers the same status and delivery details across northern Quebec and Nunavut.",
-      "stack": ["Supabase", "PWA"],
-      "tags": ["Dispatch", "Government", "Logistics"],
+      "description": "Oil, water, and sewage services involve three people with different questions: a resident wants to know where a request stands, a dispatcher needs to assign the work, and a driver needs usable delivery details. This project brings those needs together for northern Quebec and Nunavut.",
+      "stack": [
+        "Supabase",
+        "PWA"
+      ],
+      "tags": [
+        "Dispatch",
+        "Government",
+        "Logistics"
+      ],
       "url": "https://northern-dispatch.vercel.app",
       "status": "Alpha",
       "year": 2026,
-      "featured": false
+      "featured": false,
+      "approach": "The workflow follows a request from resident to dispatcher to driver, with status and assignments carried through the handoff. Civic-number addresses shape the delivery information. The alpha demonstrates how the same job can be represented clearly for each role."
     },
     {
       "name": "Q",
       "tagline": "Geo-fenced queueing for nightlife",
-      "description": "A geo-fenced queue for bars and clubs that lets people wait somewhere warm instead of standing outside in rain or snow, while venues move guests through faster and see live occupancy.",
-      "stack": ["Geo-fencing", "Mobile"],
-      "tags": ["Nightlife", "Location", "Queueing"],
+      "description": "Q began with a familiar frustration: standing outside a bar or club for thirty minutes in rain or snow. I wanted to improve the experience equally for the person waiting and the staff admitting them, with less outdoor waiting and faster entry.",
+      "stack": [
+        "Geo-fencing",
+        "Mobile"
+      ],
+      "tags": [
+        "Nightlife",
+        "Location",
+        "Queueing"
+      ],
       "status": "In progress",
       "year": 2026,
-      "featured": false
+      "featured": false,
+      "approach": "The system under development uses geolocation and geo-fencing to manage a virtual queue. That separates holding a place from physically standing at the door. Live occupancy information supports the venue’s side of admission, while guests can wait somewhere more comfortable."
     },
     {
       "name": "SpennyBurger",
       "tagline": "Smash-burger pickup & payment portal",
-      "description": "A direct ordering and payment portal built because Facebook messages were impossible to answer while cooking. Customers order and pay; the kitchen marks the order ready and the customer gets a pickup text.",
-      "stack": ["Node.js", "Stripe", "Web"],
-      "tags": ["Ordering", "Payments", "Food"],
+      "description": "When I was cooking burgers in the North, I did not have a local phone number. I had Facebook, but I could not keep answering order messages while making the burgers myself. SpennyBurger grew out of that immediate conflict between taking orders and fulfilling them.",
+      "stack": [
+        "Node.js",
+        "Stripe",
+        "Web"
+      ],
+      "tags": [
+        "Ordering",
+        "Payments",
+        "Food"
+      ],
       "status": "Archived",
       "year": 2026,
-      "featured": false
+      "featured": false,
+      "approach": "Customers place an order and pay through the portal without waiting for me to reply. A kitchen view lets me handle the order during service, then trigger a pickup text when it is ready. Each step removes a message I would otherwise have to stop cooking to answer."
     },
     {
       "name": "eProspector",
       "tagline": "Discover and track mineral deposits",
-      "description": "A shared exploration workspace for anyone interested in prospecting: pin a find, check claims, attach photos, and decide whether to keep it with the team or make it public.",
-      "stack": ["Next.js", "React", "Leaflet", "Supabase"],
-      "tags": ["Mapping", "Mining", "Field tool"],
+      "description": "As a certified minerals prospector, I wanted a useful place for anyone interested in prospecting to record and share discoveries. A find might be something to discuss with a team or something worth showing publicly; the person recording it should have that choice.",
+      "stack": [
+        "Next.js",
+        "React",
+        "Leaflet",
+        "Supabase"
+      ],
+      "tags": [
+        "Mapping",
+        "Mining",
+        "Field tool"
+      ],
       "status": "Alpha",
       "year": 2026,
-      "featured": false
+      "featured": false,
+      "approach": "The workflow starts with a location pin, then adds a claim check and photographs. Sharing is part of recording the find: send it to a team or make it public. The map gives the observation geographic context, while the photos preserve what was actually found."
     },
     {
       "name": "Invstar",
-      "tagline": "QSR inventory & ordering",
-      "description": "A department-manager inventory system for remote operations. Track units across warehouses, sea cans, freezers, coolers, dry storage, and backrooms; tap when a unit is used; and get reorder guidance based on stock, daily use, and lead time.",
-      "stack": ["Web"],
-      "tags": ["Inventory", "Ordering", "Retail"],
+      "tagline": "Stock tracking & reorder planning for the North",
+      "description": "I built Invstar for my own work as a department manager in northern Canada. I was tracking inventory with paper and memory, with stock scattered between a warehouse, sea cans, freezers, coolers, dry storage, and backrooms. Difficult logistics made mistakes expensive: ordering too much tied up stock and space; ordering too late meant running out before replenishment arrived.",
+      "stack": [
+        "Web"
+      ],
+      "tags": [
+        "Inventory",
+        "Ordering",
+        "Retail"
+      ],
       "status": "Archived",
       "year": 2026,
-      "featured": false
+      "featured": false,
+      "approach": "Recording usage had to take less effort than remembering it. A single tap deducts a bag or unit from the running count. The system accounts for how much each unit holds, where it is stored, daily consumption, and supplier lead time to recommend when to reorder and how much. The count becomes an ordering decision."
     },
     {
       "name": "MetalPRO Terminal",
       "tagline": "Bloomberg-style metals & minerals terminal",
-      "description": "A shared research terminal built with my dad for watching precious metals, mining equities, energy, rare earths, and strategic minerals in one place, with live prices, charts, futures curves, and keyboard-driven views.",
-      "stack": ["Vanilla JS", "HTML/CSS", "Netlify Functions", "Yahoo Finance"],
-      "tags": ["Finance", "Commodities", "Terminal"],
+      "description": "I built MetalPRO for my dad and me. We wanted to follow commodity prices, explore interesting metals and mining companies, and inform our investment research. Our interests stretch from precious metals to energy, rare earths, and strategic minerals.",
+      "stack": [
+        "Vanilla JS",
+        "HTML/CSS",
+        "Netlify Functions",
+        "Yahoo Finance"
+      ],
+      "tags": [
+        "Finance",
+        "Commodities",
+        "Terminal"
+      ],
       "status": "Archived",
       "year": 2026,
-      "featured": false
+      "featured": false,
+      "approach": "The terminal groups those markets into keyboard-driven views. Live prices show current conditions, candlestick charts expose price history, and futures curves offer another view of the market. Bringing these perspectives into one console supports moving between a broad scan and a closer look."
     },
     {
       "name": "COMMAND NODE",
       "tagline": "Real-time global warfare, Cold War console",
-      "description": "A real-time conquest game combining live fronts, long-term planning, persistent world state, and the atmosphere of a Cold War command room.",
-      "stack": ["JavaScript", "Web"],
-      "tags": ["Game", "Real-time"],
+      "description": "COMMAND NODE brings together my interest in strategy games, Cold War interfaces, and the challenge of a world that keeps changing. I want the player to feel immediate pressure from a live front while still thinking about a longer campaign.",
+      "stack": [
+        "JavaScript",
+        "Web"
+      ],
+      "tags": [
+        "Game",
+        "Real-time"
+      ],
       "status": "In progress",
       "year": 2026,
-      "featured": false
+      "featured": false,
+      "approach": "The game is being built around real-time fronts and persistent world state, so decisions sit within an ongoing conflict. The command-console interface gives those systems a coherent atmosphere. The intended experience combines reacting, planning, and anticipating what happens while the player is away."
     }
   ]
 }
