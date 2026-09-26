@@ -11,6 +11,17 @@
   },
   "projects": [
     {
+      "name": "Mise",
+      "tagline": "Crew scheduling built around station coverage",
+      "description": "Mise is a live, actively used scheduling workspace for managers coordinating a food-service team. A full rota is only useful if the right people are covering the right stations: cooking, baking, cash, and supervision each have their own requirements. The application brings staff availability, time off, and the week’s assignments into one working view.",
+      "approach": "The scheduler checks coverage in fifteen-minute intervals, preserves fixed shifts, and fills gaps using eligible staff with fewer assigned hours. Shifts can contain different roles over the day—for example, a baker moving to cash after the baking window. Managers can adjust shifts, retain recurring arrangements, review coverage flags, and export a PDF schedule. Shared storage keeps the plan available across manager sessions.",
+      "stack": ["React", "TypeScript", "Vite", "Supabase", "jsPDF"],
+      "tags": ["Scheduling", "Team operations", "Food service"],
+      "status": "Live",
+      "year": 2026,
+      "featured": true
+    },
+    {
       "name": "KnowYourLocal",
       "tagline": "Nationwide local-services marketplace",
       "description": "KnowYourLocal started with the idea of a peer-to-peer handyman marketplace. People need someone nearby they can trust with a job; local workers need a way to get discovered and find work. Payment confidence matters to both sides.",
